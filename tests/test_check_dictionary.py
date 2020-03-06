@@ -7,7 +7,7 @@ def dictionary_fixture():
     return rating
 
 
-class TestsCheckDictionary:
+class TestCheckDictionary:
 
     @pytest.mark.smoke
     def test_check_type_empty_dictionary(self):

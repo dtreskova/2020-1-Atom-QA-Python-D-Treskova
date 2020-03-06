@@ -1,7 +1,7 @@
 import pytest
 
 
-class TestsCheckSet:
+class TestCheckSet:
     def test_check_type_set(self):
         some_set = {}
         assert not type(some_set) == set

@@ -10,6 +10,7 @@ class TestCheckString:
 
     def test_multiplication_string(self):
         some_string = 'friend' * 5
+        assert len(some_string) == 30
         assert some_string.count('friend') == 5
 
     def test_check_slices(self):
@@ -20,7 +21,7 @@ class TestCheckString:
     def test_check_valid_error(self):
         some_string = 'hello'
         with pytest.raises(TypeError):
-            some_string[1] = 'g'
+            some_string[1] = 'h'
 
     @pytest.mark.parametrize('param', ['string', "string"])
     def test_check_parametrization(self, param):
