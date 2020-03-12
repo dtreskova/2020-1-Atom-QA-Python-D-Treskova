@@ -17,7 +17,7 @@ class TestCheckInt:
         num = int(some_string)
         assert num == 1
 
-    @pytest.mark.parametrize('param', [1, 100, 1000])
+    @pytest.mark.parametrize('param', [0, 1, 100, 1000])
     def test_check_parametrization(self, param):
         num = 1 ** param
         assert num == 1

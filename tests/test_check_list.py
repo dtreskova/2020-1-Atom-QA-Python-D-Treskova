@@ -15,7 +15,7 @@ class TestCheckList:
     def test_remove_element(self):
         some_list = [1, 2, 3, 4, 5]
         some_list.remove(5)
-        assert not 5 in some_list
+        assert 5 not in some_list
 
     @pytest.mark.parametrize('param', list(range(5)))
     def test_check_parametrization(self, param):

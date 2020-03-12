@@ -2,9 +2,10 @@ import pytest
 
 
 class TestCheckSet:
-    def test_check_type_set(self):
-        some_set = {}
-        assert not type(some_set) == set
+    def test_check_intersection(self):
+        some_set = {1, 2, 3, 4}
+        some_set_2 = {1, 8, 6, 4}
+        assert some_set & some_set_2 == {1, 4}
 
     def test_add_set(self):
         some_set = {'a', 'c', 'b'}

@@ -27,9 +27,13 @@ class TestCheckDictionary:
 
     @pytest.mark.regress
     def test_check_accessory(self, dictionary_fixture):
-        assert not 'badly' in dictionary_fixture
+        some_dict = dictionary_fixture
+        assert 'good' in some_dict.values()
 
     @pytest.mark.regress
-    @pytest.mark.parametrize('param', range(1, 3))
-    def test_check_parametrization(self, dictionary_fixture, param):
-        assert dictionary_fixture[param] == 'poor' or 'good' or 'excellent'
+    @pytest.mark.parametrize('param', [{}, {1: 'one', 2: 'two', 3: 'three'}, dict(),
+                                       dict(short='dict', long='dictionary')])
+    def test_check_parametrization(self, param):
+        some_dict = param
+        some_dict.clear()
+        assert len(some_dict) == 0
